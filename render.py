@@ -8,18 +8,11 @@ Color = tuple[int, int, int]
 Position = tuple[int, int]
 
 def render(grid: Grid, screen: Surface) -> None:
-    
-    screen.fill(GREEN)
 
-    x = 0
-    
-    for column in grid.cells:
-        y = 0
-        for cell in column:
+    for x in range(len(grid.cells)):
+
+        for y in range(len(grid.cells[x])):
             drawCell(screen, WHITE, (x, y))
-
-            y += 1
-        x += 1
 
     pygame.display.update()
 
@@ -30,5 +23,5 @@ def drawCell(screen: Surface, color: Color, pos: Position) -> None:
 
     cell = pygame.Rect(x, y, CELL_SIZE, CELL_SIZE)
     
-    pygame.draw.rect(screen, WHITE, cell)
+    pygame.draw.rect(screen, color, cell)
     pygame.draw.rect(screen, BLACK, cell, CELL_BORDER)

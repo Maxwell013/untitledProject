@@ -2,9 +2,9 @@
 
 This is a python project witch has yet to be named,
 
-### Version 0.0.0 (initial commit)
-- Setting up the codespace
-- Basic window display
+### Version 0.0.1 (Code cleanup)
+- Cleanup
+- Commenting
 
 ### Goals for this project
 - Get familiar with the python library "PyGame"
